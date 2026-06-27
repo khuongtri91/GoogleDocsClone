@@ -1,0 +1,15 @@
+$color-page-background: #f7f8fb;
+$color-surface: #ffffff;
+$color-text-primary: #172033;
+$color-primary: #2563eb;
+$color-border: #e2e8f0;
+$color-shadow: rgb(15 23 42 / 10%);
+
+:root {
+  --color-page-background: #{$color-page-background};
+  --color-surface: #{$color-surface};
+  --color-text-primary: #{$color-text-primary};
+  --color-primary: #{$color-primary};
+  --color-border: #{$color-border};
+  --color-shadow: #{$color-shadow};
+}
