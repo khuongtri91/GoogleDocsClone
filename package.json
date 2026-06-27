@@ -1,0 +1,8 @@
+{
+  "name": "google-docs-clone",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "uvicorn app.main:app --app-dir backend --reload"
+  }
+}
