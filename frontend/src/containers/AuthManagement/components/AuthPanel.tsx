@@ -1,4 +1,5 @@
 import GoogleIcon from "@mui/icons-material/Google";
+import ArticleIcon from "@mui/icons-material/Article";
 import LogoutIcon from "@mui/icons-material/Logout";
 import RefreshIcon from "@mui/icons-material/Refresh";
 import {
@@ -21,6 +22,7 @@ type AuthPanelProps = {
   error: string | null;
   loading: boolean;
   onRefresh: () => Promise<void>;
+  onOpenDocuments: () => void;
   onSignInWithGoogle: () => Promise<void>;
   onSignOut: () => Promise<void>;
 };
@@ -30,6 +32,7 @@ export function AuthPanel({
   error,
   loading,
   onRefresh,
+  onOpenDocuments,
   onSignInWithGoogle,
   onSignOut,
 }: AuthPanelProps) {
@@ -92,6 +95,15 @@ export function AuthPanel({
           <Stack spacing={1.5}>
             {signedIn ? (
               <>
+                <AppButton
+                  fullWidth
+                  size="large"
+                  variant="contained"
+                  startIcon={<ArticleIcon />}
+                  onClick={onOpenDocuments}
+                >
+                  Open documents
+                </AppButton>
                 <AppButton
                   fullWidth
                   size="large"

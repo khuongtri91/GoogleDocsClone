@@ -1,9 +1,12 @@
 import { Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 import { AuthPanel } from "./components";
 import { useAuthManagement } from "./hooks";
+import { PATHS } from "../../utils/path";
 
 export function AuthManagement() {
+  const navigate = useNavigate();
   const {
     email,
     error,
@@ -34,6 +37,7 @@ export function AuthManagement() {
             email={email}
             error={error}
             loading={loading}
+            onOpenDocuments={() => navigate(PATHS.documents)}
             onRefresh={refreshSession}
             onSignInWithGoogle={signInWithGoogle}
             onSignOut={signOut}

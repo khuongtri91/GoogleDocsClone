@@ -44,4 +44,19 @@ export const httpService = {
       ...options,
       method: "GET",
     }),
+  post: <ResponseBody>(path: string, options?: HttpRequestOptions) =>
+    request<ResponseBody>(path, {
+      ...options,
+      method: "POST",
+    }),
+  patch: <ResponseBody>(path: string, options?: HttpRequestOptions) =>
+    request<ResponseBody>(path, {
+      ...options,
+      method: "PATCH",
+    }),
+  delete: <ResponseBody>(path: string, options?: HttpRequestOptions) =>
+    request<ResponseBody>(path, {
+      ...options,
+      method: "DELETE",
+    }),
 };
